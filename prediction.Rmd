@@ -1,11 +1,9 @@
 ---
-title: "Prediction: Comparing Tress"
+title: "HUDK4051: Prediction - Comparing Trees"
 author: "Charles Lang"
 date: "1/9/2018"
 output: html_document
 ---
-
-Best class eva!!!!!
 
 In this assignment you will modelling student data using three flavors of tree algorithm: CART, C4.5 and C5.0. We will be using these algorithms to attempt to predict which students drop out of courses. Many universities have a problem with students over-enrolling in courses at the beginning of semester and then dropping most of them as the make decisions about which classes to attend. This makes it difficult to plan for the semester and allocate resources. However, schools don't want to restrict the choice of their students. One solution is to create predictions of which students are likley to drop out of which courses and use these predictions to inform semester planning. 
 
