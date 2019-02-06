@@ -25,7 +25,7 @@ In this unit you will be working towards buildimg models to predict student cour
 
 ## Knowledge Check
 
-Once you have completed all tasks in the unit, please complete the [knowledge check](https://tccolumbia.qualtrics.com/jfe/form/SV_e4E7uZmOWFjhIwJ).
+Once you have completed all tasks in the unit, please complete the [knowledge check](https://tccolumbia.qualtrics.com/jfe/form/SV_5mCqPdWk3KpfXjD).
 
 ## Additional Materials
 
