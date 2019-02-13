@@ -19,6 +19,8 @@ We will also be accessing an algorithm from the [Weka suite](https://www.cs.waik
 
 (Issue 1: failure to install RWeka/RWekajars, paste "sudo R CMD javareconf" into terminal and try to install again)
 
+**Weka requires Java and Java causes problems. If you cannot install Java and make Weka work, please follow the alternative instructions at line 121**
+
 The last package you will need is [C50](https://cran.r-project.org/web/packages/C50/index.html).
 
 ## Data
@@ -103,6 +105,8 @@ You will now repeat the same prediction but using a different tree-based algorit
 
 How does the C4.5 algorithm differ from the CART algorithm?
 
+## IF YOU CANNOT MAKE WEKA WORK PLEASE SKIP TO LINE 125
+
 Train the J48 model on the same training data and examine your results.
 ```{r}
 
@@ -117,6 +121,17 @@ Now test your new J48 model by predicting the test data and generating model fit
 
 
 ```
+
+## Alternative to Weka - if you made Weka work you can skip to line 136
+Train a Conditional Inference Tree using the `party` package on the same training data and examine your results.
+```{r}
+
+```
+Describe important model attribues of your tree. Do you believe it is a successful model of student performance, why/why not?
+
+What does the plot represent? What information does this plot tell us?
+
+Now test your new Conditional Inference model by predicting the test data and generating model fit statistics.
 
 There is an updated version of the C4.5 model called C5.0, it is implemented in the C50 package. What improvements have been made to the newer version? 
 
