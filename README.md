@@ -15,22 +15,22 @@ In this unit you will be working towards buildimg models to predict student cour
 
 ## Resources
 
-### Video
+### Videos
 [![Introduction to Prediction](https://img.youtube.com/vi/BqQR9n-Bolw/0.jpg)](https://youtu.be/BqQR9n-Bolw)
 
-[Video Slide Deck]()
+[Video Slide Deck](https://github.com/la-process-and-theory/prediction/blob/master/prediction-slides.pdf)
+
+[Jalayer Academy. (2015). R - Classification Trees (part 1 using C5.0)](https://www.youtube.com/watch?v=5NquIfQxpxk)
+
+### Readings
 
 [Adhatrao, K., Gaykar, A., Dhawan, A., Jha, R., & Honrao, V. (2013). Predicting Students’ Performance Using ID3 and C4. 5 Classification Algorithms. International Journal of Data Mining & Knowledge Management Process, 3(5).](https://arxiv.org/ftp/arxiv/papers/1310/1310.2071.pdf)
 
 [Brooks, C. & Thompson, C. (2017). Predictive modelling in teaching and learning. In The Handbook of Learning Analytics. SOLAR: Vancouver, BC](https://solaresearch.org/hla-17/hla17-chapter5/)
 
-## Videos
-
-[Jalayer Academy. (2015). R - Classification Trees (part 1 using C5.0)](https://www.youtube.com/watch?v=5NquIfQxpxk)
-
 ## Knowledge Check
 
-Once you have completed all tasks in the unit, please complete the [knowledge check](https://tccolumbia.qualtrics.com/jfe/form/SV_bIchFX8s5M3Fdml).
+Once you have completed all tasks in the unit, please complete the [knowledge check](https://tccolumbia.qualtrics.com/jfe/form/SV_eJ0QJWNsklHsdro).
 
 ## Additional Materials
 
