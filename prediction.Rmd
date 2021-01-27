@@ -17,9 +17,8 @@ There are many prediction packages available and they all have slightly differen
 
 We will also be accessing an algorithm from the [Weka suite](https://www.cs.waikato.ac.nz/~ml/weka/). Weka is a collection of machine learning algorithms that have been implemented in Java and made freely available by the University of Waikato in New Zealand. To access these algorithms you will need to first install both the [Java Runtime Environment (JRE) and Java Development Kit](http://www.oracle.com/technetwork/java/javase/downloads/jre9-downloads-3848532.html) on your machine. You can then then install the [RWeka](https://cran.r-project.org/web/packages/RWeka/index.html) package within R.
 
-(Issue 1: failure to install RWeka/RWekajars, paste "sudo R CMD javareconf" into terminal and try to install again)
-
 **Weka requires Java and Java causes problems. If you cannot install Java and make Weka work, please follow the alternative instructions at line 121**
+(Issue 1: failure to install RWeka/RWekajars, paste "sudo R CMD javareconf" into terminal and try to install again)
 
 The last package you will need is [C50](https://cran.r-project.org/web/packages/C50/index.html).
 
@@ -51,7 +50,7 @@ Visualize the relationships between your chosen variables as a scatterplot matri
 
 ## CART Trees
 
-In HUDK4050 we used the [rpart package](https://cran.r-project.org/web/packages/rpart/rpart.pdf) to generate CART tree models. Review your work using this package if you cannot remember how the trees are constructed. 
+You will use the [rpart package](https://cran.r-project.org/web/packages/rpart/rpart.pdf) to generate CART tree models.
 
 Construct a classification tree that predicts complete using the caret package.
 
@@ -60,33 +59,39 @@ library(caret)
 
 TRAIN2 <- TRAIN1[,c(2:10)] #Remove the student_id variable that we do not want to use in the model
 
+#caret does not summarize the metrics we want by default so we have to modify the output
+MySummary  <- function(data, lev = NULL, model = NULL){
+  df <- defaultSummary(data, lev, model)
+  tc <- twoClassSummary(data, lev, model)
+  pr <- prSummary(data, lev, model)
+  out <- c(df,tc,pr)
+  out}
+
 #Define the control elements we would like to use
-ctrl <- trainControl(method = "repeatedcv", #Tell caret to perform 10-fold cross validation
+ctrl <- trainControl(method = "repeatedcv", #Tell caret to perform k-fold cross validation
                 repeats = 3, #Tell caret to repeat each fold three times
-                classProbs = TRUE, #Calculate class probabilities for ROC calculation
-                summaryFunction = twoClassSummary)
+                classProbs = TRUE, #Calculate class probabilities
+                summaryFunction = MySummary)
 
 #Define the model
 cartFit <- train(complete ~ ., #Define which variable to predict 
                 data = TRAIN2, #Define the data set to train the model on
                 trControl = ctrl, #Tell caret the control elements
                 method = "rpart", #Define the model type
-                metric = "ROC", #Tell caret to calculate the ROC curve
+                metric = "Accuracy", #Final model choice is made according to sensitivity
                 preProc = c("center", "scale")) #Center and scale the data to minimize the 
 
 #Check the results
 cartFit
-                
-#Plot ROC against complexity 
-plot(cartFit)
+
 
 ```
 
 Describe important model attribues of your tree. Do you believe it is a successful model of student performance, why/why not?
 
-What does the plot represent? What information does this plot tell us?
+Can you use the sensitivity and specificity metrics to calculate the F1 metric?
 
-Now predict results from the test data and describe import attributes of this test. Do you believe it is a successful model of student performance, why/why not?
+Now predict results from the test data and describe important attributes of this test. Do you believe it is a successful model of student performance, why/why not?
 
 ```{r}
 TEST2 <- TEST1[,c(2:10)] #Remove the student_id variable that we do not want to use in the model
@@ -95,37 +100,15 @@ TEST2 <- TEST1[,c(2:10)] #Remove the student_id variable that we do not want to 
 cartClasses <- predict(cartFit, newdata = TEST2)
 
 #Generate model statistics
-confusionMatrix(data = cartClasses, TEST2$complete)
+confusionMatrix(data = cartClasses, as.factor(TEST2$complete))
 
 ```
 
-## C4.5-Type Trees
+## Conditional Inference Trees
 
-You will now repeat the same prediction but using a different tree-based algorithm called [J48](). J48 is a Java implementation of the C4.5 decsion tree algorithm of [Quinlan (1993)](). 
-
-How does the C4.5 algorithm differ from the CART algorithm?
-
-## IF YOU CANNOT MAKE WEKA WORK PLEASE SKIP TO LINE 125
-
-Train the J48 model on the same training data and examine your results.
-```{r}
-
-```
-Describe important model attribues of your tree. Do you believe it is a successful model of student performance, why/why not?
-
-What does the plot represent? What information does this plot tell us?
-
-Now test your new J48 model by predicting the test data and generating model fit statistics.
-
-```{r}
-
-
-```
-
-## Alternative to Weka - if you made Weka work you can skip to line 136
 Train a Conditional Inference Tree using the `party` package on the same training data and examine your results.
 ```{r}
-
+condFit <- 
 ```
 Describe important model attribues of your tree. Do you believe it is a successful model of student performance, why/why not?
 
@@ -138,7 +121,7 @@ There is an updated version of the C4.5 model called C5.0, it is implemented in 
 Install the C50 package, train and then test the C5.0 model on the same data.
 
 ```{r}
-
+c50Fit <- 
 ```
 
 ## Compare the models
@@ -146,7 +129,7 @@ Install the C50 package, train and then test the C5.0 model on the same data.
 caret allows us to compare all three models at once.
 
 ```{r}
-resamps <- resamples(list(cart = cartFit, jfoureight = j48Fit, cfiveo = c50Fit))
+resamps <- resamples(list(cart = cartFit, condinf = condFit, cfiveo = c50Fit))
 summary(resamps)
 ```
 

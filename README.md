@@ -5,7 +5,7 @@ Prediction of student behavior has been a prominant area of research in learning
 ## Goals for this Unit
 
 * Be able to discuss different uses for prediction algorithms in education
-* Be able to discuss the theory behind the CART, C4.5 and C5 classification algorithms
+* Be able to discuss the theory behind the CART, Conditional Inference Trees and C5 classification algorithms
 * Construct classification models to predict student dropout and state validation metrics for the model
 * Compare classification models on appropriate metrics
 
