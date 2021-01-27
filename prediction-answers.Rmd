@@ -73,8 +73,8 @@ TRAIN2 <- TRAIN1[,c(2:10)] #Remove the student_id variable that we do not want t
 
 #Define the control elements we would like to use
 ctrl <- trainControl(method = "repeatedcv", #Tell caret to perform 10-fold cross validation
-                repeats = 3, #Tell caret to repeat each fold three times
-                classProbs = TRUE, #Calculate class probabilities for ROC calculation
+                repeats = 5, #Tell caret to repeat each fold three times
+                classProbs = TRUE, #Calculate class probabilities
                 summaryFunction = twoClassSummary)
 
 #Define the model
@@ -82,7 +82,7 @@ cartFit <- train(complete ~ ., #Define which variable to predict
                 data = TRAIN2, #Define the data set to train the model on
                 trControl = ctrl, #Tell caret the control elements (EG - the cross validation)
                 method = "rpart", #Define the model type
-                metric = "ROC", #Tell caret to calculate the ROC curve
+                metric = "ROC", #Tell caret to calculate the sensitivity and specificty
                 preProc = c("center", "scale")) #Center and scale the data to minimize the 
 
 #Check the results
