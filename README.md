@@ -13,7 +13,12 @@ Prediction of student behavior has been a prominant area of research in learning
 
 In this unit you will be working towards buildimg models to predict student course dropout and then comparing those models. As background to this task please read over the follwing materials and watch the methodological videos. If you find any other useful materials please add them under **Additional Materials** at the end of the this page and pull request the change back to this repo.
 
-## Readings
+## Resources
+
+### Video
+[![Introduction to Prediction](https://img.youtube.com/vi/BqQR9n-Bolw/0.jpg)](https://youtu.be/BqQR9n-Bolw)
+
+[Video Slide Deck]()
 
 [Adhatrao, K., Gaykar, A., Dhawan, A., Jha, R., & Honrao, V. (2013). Predicting Students’ Performance Using ID3 and C4. 5 Classification Algorithms. International Journal of Data Mining & Knowledge Management Process, 3(5).](https://arxiv.org/ftp/arxiv/papers/1310/1310.2071.pdf)
 
