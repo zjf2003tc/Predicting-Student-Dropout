@@ -16,11 +16,14 @@ In this unit you will be working towards buildimg models to predict student cour
 ## Resources
 
 ### Videos
+
 [![Introduction to Prediction](https://img.youtube.com/vi/BqQR9n-Bolw/0.jpg)](https://youtu.be/BqQR9n-Bolw)
 
 [Video Slide Deck](https://github.com/la-process-and-theory/prediction/blob/master/prediction-slides.pdf)
 
 [Jalayer Academy. (2015). R - Classification Trees (part 1 using C5.0)](https://www.youtube.com/watch?v=5NquIfQxpxk)
+
+[Grey, C.G.P. (2017). How Machines Learn.](https://www.youtube.com/watch?v=R9OHn5ZF4Uo)
 
 ### Readings
 
