@@ -4,7 +4,7 @@
 * Compare the accuracy of three models: CART, Conditional Inference Tree, and C5.0
 
 ## Data Set
-The data comes from an unnamed university registrar's office. 
+The data come from an unnamed university registrar's office. 
 Below are definitions for each of the variables and six example rows:
 
 * student_id = Student ID
