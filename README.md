@@ -26,6 +26,16 @@ Below are definitions for each of the variables and six example rows:
 
 ## Exploratory Analysis
 
+Associations were analyzed between each pair of variables using ggpairs. There were two key findings:
+
+1. The correlation between each pair of continuous variables (Entrance test score, Courses taken, and Date of enrollment) was significant in every case. 
+
+* The most significant relationship was between entrance test score and time of enrollment (r = -.369). This makes sense because the higher score someone gets on an entrance exam, the more prepared they are for a class and the more likely they are to have a higher number of credits entering University. Colleges often schedule registration dates by number of credits; students with more credits can schedule first.
+
+* For the same reason, it is also sensible why there would be a negative correlation between courses taken and date of enrollment and why there would be a positive relationship between entrance test score and courses taken.
+
+2. There were no notable categorical associations.
+
 ## Modeling
 
 ## Comparison
