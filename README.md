@@ -41,10 +41,17 @@ Associations were analyzed between each pair of variables using ggpairs. There w
 
 ## Model Example: Conditional Inference Tree
 
-Below is a plot illustrating the parameters selected by the conditional inference tree model and the associated classification distributions.
+Below is a plot illustrating the parameters selected by the conditional inference tree model and the associated classification distributions. Scaling and normalization in this model instance were not performed to enhance interpretability of the tree plot.
 
 ![](condinftree.png)
 
+* The model has several branches with many variables directing the classification: years, entrance test score, total courses taken, and course_id.
+
+* Similarly to the rpart model, it is clear that having been enrolled in a program at the University for a longer period of time before taking a course is an excellent predictor of completion, with more years resulting in zero chance of completion.
+
+* More total courses taken seems to result in a lower chance of completion. This might be because it is correlated with the years of study variable, which is also inversely related to successful completion.
+
+* Entrance test score was not an attribute of the rpart model but was in this model. It appears just once as a final decision node, but it does end up slightly impacting the probability of completion of about 1700 students in the train data.
 
 
 ## Comparison
