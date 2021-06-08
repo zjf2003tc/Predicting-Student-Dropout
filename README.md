@@ -79,7 +79,7 @@ Within the final conditional inference tree model these are several important fe
 
 * The model has 17 terminal branches which are directed by years, course_id, courses taken, and gender. Notably, entrance test scores were not an attribute of this tree, nor many of the other trees. Entrance tests may only be necessary in deterring students from taking a class in the first place, but they don’t seem to be efficient at predicting dropout.
 
-* Again, having been enrolled in a program for more than one year is almost a perfect predictor of dropout for this data. It might be the case that students were unable to enroll in courses at this university if they were not freshmen. Regardless, these students are lacking awareness of this serious hurdle to completing a course. Proper restrictions for sign-up and better communication about this rule is imperative.
+* Having been enrolled in a program for more than one year is almost a perfect predictor of dropout for this data. It might be the case that students were unable to enroll in courses at this university if they were not freshmen. Regardless, these students are lacking awareness of this serious hurdle to completing a course. Proper restrictions for sign-up and better communication about this rule are imperative.
 
 * Unsurprisingly, there are variable dropout rates by course. The exact details regarding which courses align with which predicted rates of drop out once accounting for other student characteristics like courses taken could be helpful to explore. For example, students taking course 658438 might be more likely to drop out if they have taken fewer classes previously.
 
