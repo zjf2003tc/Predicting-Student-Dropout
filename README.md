@@ -7,6 +7,31 @@ Prediction of student behavior has been a prominant area of research in learning
 * Construct classification algorithms to predict student dropout
 * Compare the accuracy of three models: CART, Conditional Inference Tree, and C5.0
 
+## Data Set
+The data comes from an unnamed university registrar's office. 
+Below are definitions for each of the variables and six example rows:
+
+* student_id = Student ID
+* years = Number of years the student has been enrolled in their program of study
+* entrance_test_score = Entrance exam test score
+* courses_taken = Number of courses a student has taken during their program
+* complete = Whether or not a student completed a course or dropped out (yes = completed)
+* enroll_data_time = Date and time student enrolled in POSIXct format
+* course_id = Course ID
+* international = Is the student from overseas
+* online = Is the student only taking online courses
+* gender = One of five possible gender identities
+
+![](sampledata.png)
+
+## Exploratory Analysis
+
+## Modeling
+
+## Comparison
+
+
+
 ## Resources
 
 * [The caret package](https://topepo.github.io/caret/train-models-by-tag.html)
