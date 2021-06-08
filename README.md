@@ -34,9 +34,22 @@ Associations were analyzed between each pair of variables using ggpairs. There w
 
 ## Modeling
 
+* Data were separated into a train and test dataframe, with 75% of the rows in test.
+* Data were centered and scaled to make the weights of the variables uniform regardless of the model.
+* Three models within the caret package were used: "rpart", "ctree" and "C5.0" 
+* K-fold cross validation was applied to all of the models, and the final model choice was made according to the sensitivity metric.
+
+## Model Example: Conditional Inference Tree
+
+Below is a plot illustrating the parameters selected by the conditional inference tree model and the associated classification distributions.
+
+![](condinftree.png)
+
+
+
 ## Comparison
 
-
+#
 
 ## Resources
 
