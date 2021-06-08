@@ -75,9 +75,9 @@ Below are the performance metrics for the rpart (cart), conditional inference (c
 
 ## Conclusion
 
-Within the final conditional inference tree model these are several important features:
+There are several key takeways/implications:
 
-* The model has 17 terminal branches which are directed by years, course_id, courses taken, and gender. Notably, entrance test scores were not an attribute of this tree, nor many of the other trees. Entrance tests may only be necessary in deterring students from taking a class in the first place, but they don’t seem to be efficient at predicting dropout.
+* The model with the highest performance (conditional infercence tree) has 17 terminal branches which are directed by years, course_id, courses taken, and gender. Notably, entrance test scores were not an attribute of this tree, nor many of the other trees. Entrance tests may only be necessary in deterring students from taking a class in the first place, but they don’t seem to be efficient at predicting dropout.
 
 * Having been enrolled in a program for more than one year is almost a perfect predictor of dropout for this data. It might be the case that students were unable to enroll in courses at this university if they were not freshmen. Regardless, these students are lacking awareness of this serious hurdle to completing a course. Proper restrictions for sign-up and better communication about this rule are imperative.
 
