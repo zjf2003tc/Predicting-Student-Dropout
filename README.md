@@ -22,7 +22,7 @@ Below are definitions for each of the variables and six example rows:
 * online = Is the student only taking online courses
 * gender = One of five possible gender identities
 
-![](C:\Users\Zachary Friedman\Desktop\sampledata.png)
+![](sampledata.png)
 
 ## Exploratory Analysis
 
